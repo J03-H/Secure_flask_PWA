@@ -46,7 +46,7 @@ def add_user():
 
     if len(ans) > 0:
         connection.close()
-        return render_template('login.html')
+        return render_template('signUp.html')
     else:
         cursor.execute("INSERT INTO USERS(fname,lname,email,password)value(?,?,?,?)",(fname,lname,email,password))
         connection.commit()
