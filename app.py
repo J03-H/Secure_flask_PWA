@@ -48,7 +48,7 @@ def add_user():
         connection.close()
         return render_template('signUp.html')
     else:
-        cursor.execute("INSERT INTO USERS(fname,lname,email,password)value(?,?,?,?)",(fname,lname,email,password))
+        cursor.execute("INSERT INTO USERS(first_name,last_name,email,password)value(?,?,?,?)",(fname,lname,email,password))
         connection.commit()
         connection.close()
         return render_template('login.html')
